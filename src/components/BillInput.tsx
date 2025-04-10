@@ -1,12 +1,22 @@
 import React from "react";
 import dollarIcon from "/icon-dollar.svg";
-interface BillInputProps {
+
+// type Props man neisejo ziurejau pagal pvz PALEIDO bet nepilnai pagal praita darba <BANDYSIU PERDARYTI>
+/* type Props = {
+  handleSubmit: () => void;
+};
+
+// CIA METE KLAIDA : export default function
+
+export default function CalculateRepaymentsButton({ handleSubmit }: Props) {*/
+
+type Props = {
   bill: number;
   setBill: (value: number) => void;
   isError: boolean;
-}
+};
 
-const BillInput: React.FC<BillInputProps> = ({ bill, setBill, isError }) => {
+const BillInput: React.FC<Props> = ({ bill, setBill, isError }) => {
   const errorMessage =
     bill === 0 ? "Can't be zero" : bill < 0 ? "Can't be lower than 1" : "";
 

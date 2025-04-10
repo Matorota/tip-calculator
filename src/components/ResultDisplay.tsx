@@ -1,14 +1,17 @@
 import React from "react";
 
-interface ResultDisplayProps {
+// type Props man neisejo ziurejau pagal pvz <BANDYSIU PERDARYTI>
+/* type Props = {
+  handleSubmit: () => void;
+};
+
+export default function CalculateRepaymentsButton({ handleSubmit }: Props) {*/
+type Props = {
   tipAmount: number;
   totalAmount: number;
-}
+};
 
-const ResultDisplay: React.FC<ResultDisplayProps> = ({
-  tipAmount,
-  totalAmount,
-}) => {
+const ResultDisplay: React.FC<Props> = ({ tipAmount, totalAmount }) => {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex justify-between items-center">

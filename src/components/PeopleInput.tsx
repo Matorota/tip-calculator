@@ -1,16 +1,13 @@
 import React from "react";
 import personIcon from "/icon-person.svg";
-interface PeopleInputProps {
+
+type Props = {
   people: number;
   setPeople: (value: number) => void;
   isError: boolean;
-}
+};
 
-const PeopleInput: React.FC<PeopleInputProps> = ({
-  people,
-  setPeople,
-  isError,
-}) => {
+const PeopleInput: React.FC<Props> = ({ people, setPeople, isError }) => {
   const errorMessage =
     people === 0 ? "Can't be zero" : people < 0 ? "Can't be lower than 1" : "";
 

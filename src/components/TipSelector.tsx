@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 
-interface TipSelectorProps {
+type Props = {
   tipPercentage: number;
   setTipPercentage: (value: number) => void;
-}
+};
 
-const TipSelector: React.FC<TipSelectorProps> = ({
-  tipPercentage,
-  setTipPercentage,
-}) => {
-  const [customTip, setCustomTip] = useState<number | null>(null);
+const TipSelector: React.FC<Props> = ({ tipPercentage, setTipPercentage }) => {
   const tipOptions = [5, 10, 15, 25, 50];
+
+  const [customTip, setCustomTip] = useState<number | null>(null);
 
   const handleTipClick = (tip: number) => {
     setCustomTip(null);

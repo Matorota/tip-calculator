@@ -1,10 +1,10 @@
 import React from "react";
 
-interface ResetButtonProps {
+type Props = {
   handleReset: () => void;
-}
+};
 
-const ResetButton: React.FC<ResetButtonProps> = ({ handleReset }) => {
+const ResetButton: React.FC<Props> = ({ handleReset }) => {
   return (
     <button
       onClick={handleReset}
