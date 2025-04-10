@@ -9,18 +9,18 @@ const TipSelector: React.FC<TipSelectorProps> = ({
   tipPercentage,
   setTipPercentage,
 }) => {
-  const [customTip, setCustomTip] = useState<number | null>(null); // Track custom tip input
-  const tipOptions = [5, 10, 15, 25, 50]; // Predefined tip options
+  const [customTip, setCustomTip] = useState<number | null>(null);
+  const tipOptions = [5, 10, 15, 25, 50];
 
   const handleTipClick = (tip: number) => {
-    setCustomTip(null); // Clear custom tip when a predefined tip is selected
+    setCustomTip(null);
     setTipPercentage(tip);
   };
 
   const handleCustomTipChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value) || 0;
-    setCustomTip(value); // Set custom tip
-    setTipPercentage(value); // Update tip percentage
+    setCustomTip(value);
+    setTipPercentage(value);
   };
 
   return (
@@ -45,7 +45,7 @@ const TipSelector: React.FC<TipSelectorProps> = ({
           placeholder="Custom"
           value={customTip !== null ? customTip : ""}
           onChange={handleCustomTipChange}
-          className="py-2 px-2 text-center border rounded bg-gray-100 text-cyan-900 font-extrabold focus:outline-none border-0 focus:ring-2 focus:ring-[#93e3d8]"
+          className="py-2 px-2 text-center  rounded bg-gray-100 text-cyan-900 font-extrabold focus:outline-none border-0 focus:ring-2 focus:ring-[#93e3d8]"
         />
       </div>
     </div>

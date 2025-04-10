@@ -1,6 +1,5 @@
 import React from "react";
-import dollarIcon from "/icon-dollar.svg"; // Import the dollar icon from the public folder
-
+import dollarIcon from "/icon-dollar.svg";
 interface BillInputProps {
   bill: number;
   setBill: (value: number) => void;
@@ -20,13 +19,11 @@ const BillInput: React.FC<BillInputProps> = ({ bill, setBill, isError }) => {
         )}
       </div>
       <div className="relative">
-        {/* Dollar Icon */}
         <img
           src={dollarIcon}
           alt="Dollar Icon"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
         />
-        {/* Input Field */}
         <input
           type="number"
           value={bill}

@@ -1,6 +1,5 @@
 import React from "react";
-import personIcon from "/icon-person.svg"; // Import the person icon from the public folder
-
+import personIcon from "/icon-person.svg";
 interface PeopleInputProps {
   people: number;
   setPeople: (value: number) => void;
@@ -24,13 +23,11 @@ const PeopleInput: React.FC<PeopleInputProps> = ({
         )}
       </div>
       <div className="relative">
-        {/* Person Icon */}
         <img
           src={personIcon}
           alt="Person Icon"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
         />
-        {/* Input Field */}
         <input
           type="number"
           value={people}

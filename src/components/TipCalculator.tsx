@@ -18,14 +18,12 @@ const TipCalculator: React.FC = () => {
     bill && people ? (bill + bill * (tipPercentage / 100)) / people : 0;
 
   const handleReset = () => {
-    // Validate inputs
     const billError = bill === 0;
     const peopleError = people === 0;
 
     setBillError(billError);
     setPeopleError(peopleError);
 
-    // Only reset if there are no errors
     if (!billError && !peopleError) {
       setBill(0);
       setPeople(1);

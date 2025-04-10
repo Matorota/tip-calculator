@@ -11,7 +11,6 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-6">
-      {/* Tip Amount */}
       <div className="flex justify-between items-center">
         <div>
           <p className="text-white text-sm">Tip Amount</p>
@@ -21,7 +20,6 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({
           ${tipAmount.toFixed(2)}
         </p>
       </div>
-      {/* Total */}
       <div className="flex justify-between items-center">
         <div>
           <p className="text-white text-sm">Total</p>
